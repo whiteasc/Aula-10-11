@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100vh;
+}
+
+body {
+    background-color: #082032;
+    font-family: 'Trebuchet MS', Arial;
+    border-radius: 0px;
+    border: 3px solid #334756;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 40px;
+    letter-spacing: 1px;
+    margin: 60px 0;
+    color: #F0A500;
+}
+
+form {
+    margin: 20px 0;
+    background-color: #F0A500;
+    padding: 20px 25px;
+    border: 3px solid #334756;
+    border-radius: 5px;
+    overflow: hidden;
+    animation: aparecer 1500ms;
+}
+
+form .img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+form .inserir {
+    margin-bottom: 10px;
+    animation: campos 1s;
+}
+
+form .inserir label {
+    font-size: 15px;
+    color: #000000;
+}
+
+form .inserir input {
+    width: 100%;
+    display: block;
+    margin-top: 5px;
+    padding: 7px;
+    font-size: 10px;
+    color: #191920;
+    border-radius: 5px;
+    border: 3px solid #334756;
+    outline-color: 191920;
+}
+
+form .btn-login {
+    display: block;
+    min-width: 200px;
+    border: none;
+    background-color: #082032;
+    color: #F0A500;
+    border-radius: 25px;
+    margin: auto;
+    padding: 7px;
+    border: 3px solid #334756;
+    border-radius: 5px;
+}
+
+.btn-login:hover {
+    background-color: #4e9f3d;
+    color: #fafafa;
+    transition: 1s ease-in-out;
+}
+
+.esconder-form {
+    animation: esconder 1s forwards;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: scale(0.4);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes campos {
+    from {
+        transform: translateY(-250%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes esconder {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
